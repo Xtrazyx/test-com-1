@@ -17,18 +17,18 @@ const router = createBrowserRouter([
     path: '/',
     element: <App />,
     errorElement: <ErrorPage />,
-  },
-  {
-    path: '/players',
-    loader: getAllPlayers,
-    element: <PlayersPage />,
-    errorElement: <ErrorPage />
-  },
-  {
-    path: '/players/:id',
-    loader: getPlayerById,
-    element: <PlayerDetailPage />,
-    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: '/players',
+        loader: getAllPlayers,
+        element: <PlayersPage />,
+      },
+      {
+        path: '/players/:id',
+        loader: getPlayerById,
+        element: <PlayerDetailPage />,
+      },
+    ]
   },
 ]);
 

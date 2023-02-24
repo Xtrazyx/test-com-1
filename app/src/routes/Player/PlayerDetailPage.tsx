@@ -20,7 +20,6 @@ export default function PlayerDetailPage(): JSX.Element {
           <div>{player.data.points} points</div>
         </div>
       </div>
-      <RouterLink route={`/players`} label={`Look at all players`} />
     </div>
   );
 }
