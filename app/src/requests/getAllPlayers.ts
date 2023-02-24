@@ -1,5 +1,7 @@
 export async function getAllPlayers() {
-    const ALL_PLAYERS_URL = 'http://localhost:3000/players';
+    const domain = process.env.DOMAIN || 'localhost';
+
+    const ALL_PLAYERS_URL = `http://${domain}/players`;
 
     try {
         const response = await fetch(ALL_PLAYERS_URL, { method: 'GET' });
