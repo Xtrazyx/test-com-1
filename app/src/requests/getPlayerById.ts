@@ -1,5 +1,5 @@
 export async function getPlayerById({ params }: { params: { id?: string }}) {
-    const domain = process.env.DOMAIN || 'localhost';
+    const domain = import.meta.env.DOMAIN || 'localhost';
 
     const ALL_PLAYERS_URL = `http://${domain}/players/${params.id || ''}`;
 
