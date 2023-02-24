@@ -1,7 +1,7 @@
 export async function getAllPlayers() {
     const domain = import.meta.env.DOMAIN || 'test-com-1.herokuapp.com';
 
-    const ALL_PLAYERS_URL = `http://${domain}/players`;
+    const ALL_PLAYERS_URL = `https://${domain}/players`;
 
     try {
         const response = await fetch(ALL_PLAYERS_URL, { method: 'GET' });
