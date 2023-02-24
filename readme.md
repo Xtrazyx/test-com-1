@@ -20,4 +20,5 @@ default url is ```http://localhost:5173```
 WIP: only the AWS ec2 instance is configured
 
 # Unit Tests
-TODO
+## Server
+go to ```/server``` and run the *few* test available ```yarn test```
