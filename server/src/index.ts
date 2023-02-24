@@ -1,23 +1,18 @@
 import express from "express";
-import axios from "axios";
 import cors from "cors";
-import { sortPlayersById } from "./services/sortPlayers";
-import { getPlayerById } from "./services/getPlayerById";
+import { PlayerService } from "./services/PlayerService";
 
 const app = express();
 
 // Put this in ENV variables
 const PORT = 3000;
-const PLAYER_LIST_URL = 'https://eurosportdigital.github.io/eurosport-node-developer-recruitment/headtohead.json';
 
 app.use(cors());
 
 // GET /players
 app.get("/players", async (req, res) => {
     try {
-        const response = await axios.get(PLAYER_LIST_URL);
-
-        const sortedPlayers = sortPlayersById(response.data.players);
+        const sortedPlayers = await PlayerService.getAllSortById();
 
         res.json(sortedPlayers);
     } catch {
@@ -28,9 +23,7 @@ app.get("/players", async (req, res) => {
 // GET /players/<id>
 app.get("/players/:id", async (req, res) => {
     try {
-        const response = await axios.get(PLAYER_LIST_URL);
-
-        const player = getPlayerById(Number(req.params.id), response.data.players);
+        const player = await PlayerService.getPlayerById(req.params.id);
 
         res.json(player);
     } catch {
