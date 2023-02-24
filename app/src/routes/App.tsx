@@ -1,13 +1,12 @@
-import { Link } from "react-router-dom";
-import './App.css'
+import RouterLink from "../componants/RouterLink";
+import "./App.css";
 
 function App() {
-
   return (
     <div className="App">
-      <Link to={`players`}>Look at all players</Link>
+      <RouterLink route={`/players`} label={`Look at all players`} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

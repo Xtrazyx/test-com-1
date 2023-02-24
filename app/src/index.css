@@ -107,6 +107,17 @@ button:focus-visible {
   font-weight: bold;
 }
 
+.link {
+  border: 1px solid white;
+  border-radius: 2rem;
+  padding: 0.65rem;
+}
+
+.link-container {
+  margin: 1.5rem;
+  padding: 0;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #6c859a;

@@ -1,4 +1,5 @@
 import { useLoaderData, Link } from "react-router-dom";
+import RouterLink from "../../componants/RouterLink";
 import { Player } from "../../types";
 
 export default function PlayerDetailPage(): JSX.Element {
@@ -19,7 +20,7 @@ export default function PlayerDetailPage(): JSX.Element {
           <div>{player.data.points} points</div>
         </div>
       </div>
-      <Link to={`/players`}>Look at all players</Link>
+      <RouterLink route={`/players`} label={`Look at all players`} />
     </div>
   );
 }

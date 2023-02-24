@@ -10,21 +10,25 @@ import { getAllPlayers } from './requests/getAllPlayers';
 import PlayersPage from './routes/Players/PlayersPage';
 import PlayerDetailPage from './routes/Player/PlayerDetailPage';
 import { getPlayerById } from './requests/getPlayerById';
+import ErrorPage from './routes/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    errorElement: <ErrorPage />,
   },
   {
     path: '/players',
     loader: getAllPlayers,
-    element: <PlayersPage />
+    element: <PlayersPage />,
+    errorElement: <ErrorPage />
   },
   {
     path: '/players/:id',
     loader: getPlayerById,
-    element: <PlayerDetailPage />
+    element: <PlayerDetailPage />,
+    errorElement: <ErrorPage />,
   },
 ]);
 
