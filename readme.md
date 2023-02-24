@@ -24,4 +24,4 @@ WIP: only the AWS ec2 instance is configured
 go to ```/server``` and run the *few* test available ```yarn test```
 
 # Demo
-[front demo](https://test-com-1-front.herokuapp.com/players)
+[front demo](https://test-com-1-front.herokuapp.com)
