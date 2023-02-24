@@ -15,7 +15,7 @@ export const PlayerService = {
       throw new Error("Not found");
     }
   },
-  getPlayerById: async (id: string) => {
+  getById: async (id: string) => {
     try {
       const response = await axios.get(PLAYER_LIST_URL);
 

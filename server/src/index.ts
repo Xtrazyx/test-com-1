@@ -23,7 +23,7 @@ app.get("/players", async (req, res) => {
 // GET /players/<id>
 app.get("/players/:id", async (req, res) => {
     try {
-        const player = await PlayerService.getPlayerById(req.params.id);
+        const player = await PlayerService.getById(req.params.id);
 
         res.json(player);
     } catch {
