@@ -1,5 +1,3 @@
-import { PlayerList } from "../types";
-
 export async function getAllPlayers() {
     const ALL_PLAYERS_URL = 'http://localhost:3000/players';
 
